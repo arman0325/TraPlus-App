@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divider1"
+                android:textColor="@color/black"
+                android:textSize="36dp"/>
+
+            <TextView
+                android:id="@+id/mDescribe"
+                android:layout_marginEnd="80dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divider4"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divider2"
+                android:textSize="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fxCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:onClick="fxPage"
+                    app:cardBackgroundColor="#ff9e00"
+                    app:cardCornerRadius="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:id="@+id/jpyScale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="¥ ---- "
+                            android:textSize="12dp"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@+id/jpyScale"
+                            android:text="@string/calDescribe"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"/>
+
+                        <TextView
+                            android:id="@+id/sign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/jpyScale"
+                            android:textColor="@color/white"
+                            android:textSize="24dp"
+                            android:text="$" />
+
+                        <TextView
+                            android:id="@+id/rateValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/jpyScale"
+                            android:layout_toRightOf="@+id/sign"
+                            android:textColor="@color/white"
+                            android:textSize="24dp"
+                            android:text=" ----- " />
+
+                        <!--<TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/jpyScale"
+                            android:layout_toRightOf="@+id/rateValue"
+                            android:padding="6dp"
+                            android:text="@string/hkdS"
+                            android:textSize="12dp"
+                            android:textColor="@color/white"/>-->
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/currency"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:maxWidth="40dp"
+                            android:maxHeight="40dp"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:onClick="weatherPage"
+                    app:cardCornerRadius="12dp">
+
+                    <ImageView
+                        android:id="@+id/weatherCardBg"
+                        android:src="@drawable/background_afternoon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:padding="12dp">
+
+                        <TextView
+                            android:id="@+id/tempValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/rainValue"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:text="--- °C" />
+
+                        <TextView
+                            android:id="@+id/rainValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/rainTxt"
+                            android:textColor="@color/white"
+                            android:textSize="28dp"
+                            android:text="--- %" />
+
+                        <TextView
+                            android:id="@+id/rainTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="@string/wCardRain"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"/>
+
+                        <ImageView
+                            android:id="@+id/weatherCardImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/exclamation"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:maxWidth="40dp"
+                            android:maxHeight="40dp"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/divider3"
+                android:textSize="16dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:onClick="doCapture"
+                app:cardCornerRadius="12dp">
+
+                <ImageView
+                    android:src="@drawable/background_ltr_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/camIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/camera"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/camTitle"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/camIcon"
+                        android:textColor="@color/white"
+                        android:text="@string/camBtn"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/camTitle"
+                        android:layout_toRightOf="@id/camIcon"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:text="@string/camDescribe"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:onClick="ToOfflineMenu"
+                app:cardCornerRadius="12dp">
+
+                <ImageView
+                    android:src="@drawable/background_ltr_yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/omIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/offline"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/omTitle"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/omIcon"
+                        android:textColor="@color/white"
+                        android:text="@string/dictBtn"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/omTitle"
+                        android:layout_toRightOf="@id/omIcon"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:text="@string/omDescribe"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:onClick="tablemanner"
+                app:cardCornerRadius="12dp">
+
+                <ImageView
+                    android:src="@drawable/background_ltr_blue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/tmIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/tablemanner"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/tmTitle"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tmIcon"
+                        android:textColor="@color/white"
+                        android:text="@string/tableBtn"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tmTitle"
+                        android:layout_toRightOf="@id/tmIcon"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:text="@string/tmDescribe"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:onClick="voicePage"
+                app:cardCornerRadius="12dp">
+
+                <ImageView
+                    android:src="@drawable/background_ltr_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/chatIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/speech"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/chatTitle"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/chatIcon"
+                        android:textColor="@color/white"
+                        android:text="@string/chatBtn"
+                        android:textSize="18dp"/>
+
+                    <TextView
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chatTitle"
+                        android:layout_toRightOf="@id/chatIcon"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:text="@string/chatDescribe"/>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityChat">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#52beea"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:rotation="180"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/customer"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp" />
+
+                <TextView
+                    android:id="@+id/jaTxtFromCustomer"
+                    android:padding="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chat_message_left"
+                    android:text="Here is Japanese text from user"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"/>
+
+                <Button
+                    android:id="@+id/voiceJP"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/chat_button"
+                    app:icon="@android:drawable/ic_lock_silent_mode_off" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/jaTxtFromWaiter"
+                    android:padding="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/jaWaiterImg"
+                    android:background="@drawable/chat_message_right"
+                    android:text="Here is Japanese text from waiter"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:id="@+id/jaWaiterImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="15dp"
+                    android:src="@drawable/waiter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/waiterEditTxt"
+                    android:padding="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/waiterMicBtn"
+                    android:background="@drawable/chat_edit_text" />
+
+                <Button
+                    android:id="@+id/waiterMicBtn"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/chat_button"
+                    android:layout_toLeftOf="@+id/waiterSendBtn"
+                    android:text="MIC" />
+
+                <Button
+                    android:id="@+id/waiterSendBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/chat_button"
+                    android:text="SEND"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/waiter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp" />
+
+                <TextView
+                    android:id="@+id/enTxtFromWaiter"
+                    android:padding="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/chat_message_left"
+                    android:text="Here is English/Chinese text from waiter"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/enTxtFromCustomer"
+                    android:padding="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/enCustomerImg"
+                    android:background="@drawable/chat_message_right"
+                    android:text="Here is English/Chinese text from user"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"/>
+
+                <ImageView
+                    android:id="@+id/enCustomerImg"
+                    android:layout_margin="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/customer"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/customerEditTxt"
+                    android:padding="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/chat_edit_text"
+                    android:layout_toLeftOf="@+id/customerMicBtn" />
+
+                <Button
+                    android:id="@+id/customerMicBtn"
+                    android:layout_marginEnd="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/chat_button"
+                    android:layout_toLeftOf="@+id/customerSendBtn"
+                    android:text="MIC" />
+
+                <Button
+                    android:id="@+id/customerSendBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/chat_button"
+                    android:text="SEND"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".voiceChat">
+
+    <Button
+        android:id="@+id/voiceBtnJP"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/voiceJPBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/voiceBtnZH"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/voiceZHBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textZh1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Japanese text"
+        app:layout_constraintEnd_toStartOf="@+id/voiceJP"
+        app:layout_constraintTop_toBottomOf="@+id/editTextZH" />
+
+    <TextView
+        android:id="@+id/textZh2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Japanese voice"
+        app:layout_constraintEnd_toStartOf="@+id/voiceJP"
+        app:layout_constraintTop_toBottomOf="@+id/textZh1" />
+
+    <TextView
+        android:id="@+id/textJp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Chinese text"
+        app:layout_constraintStart_toEndOf="@+id/voiceZH"
+        app:layout_constraintTop_toBottomOf="@+id/editTextJP" />
+
+    <TextView
+        android:id="@+id/textJp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Cantonese Voice"
+        app:layout_constraintStart_toEndOf="@+id/voiceZH"
+        app:layout_constraintTop_toBottomOf="@+id/textJp1" />
+
+    <EditText
+        android:id="@+id/editTextJP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textZh2" />
+
+    <EditText
+        android:id="@+id/editTextZH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/voiceJP"
+        android:layout_width="64dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
+        app:icon="@android:drawable/ic_lock_silent_mode_off"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextZH" />
+
+    <Button
+        android:id="@+id/voiceZH"
+        android:layout_width="64dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:icon="@android:drawable/ic_lock_silent_mode_off"
+        app:iconPadding="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextJP" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70px"
+        android:layout_marginRight="70px"
+        android:text="&#10;Amount of HKD spent" />
+
+    <EditText
+        android:id="@+id/editHKD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="70px"
+        android:layout_marginRight="70px"
+        android:layout_below="@id/tv1"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70px"
+        android:layout_marginRight="70px"
+        android:layout_below="@id/editHKD"
+        android:text="&#10;Amount of JPY exchanged" />
+
+    <EditText
+        android:id="@+id/editJPY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="70px"
+        android:layout_marginRight="70px"
+        android:layout_below="@id/tv2"
+        android:inputType="number"/>
+
+</LinearLayout>

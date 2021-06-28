@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_afternoon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/wCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:textSize="28dp"
+                android:text="- - -"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/wDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="24dp"
+                android:text="------ ------" />
+
+            <ImageView
+                android:id="@+id/wNowImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:maxWidth="100dp"
+                android:maxHeight="100dp"
+                android:src="@drawable/exclamation"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/wNowTemp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="24dp"
+                    android:text="--- °C"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/wNowRain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="24dp"
+                    android:text="---%"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/wTemperature"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/wRain"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-12dp"
+            app:cardCornerRadius="12dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wDivider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:textSize="24dp"
+                    android:text="@string/wDivider" />
+
+                <LinearLayout
+                    android:layout_below="@+id/wDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp">
+
+                        <ImageView
+                            android:id="@+id/wOneHrBg"
+                            android:src="@drawable/background_afternoon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/wOneHrTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="- - : - -"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/wOneHrImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitStart"
+                                android:maxWidth="50dp"
+                                android:maxHeight="50dp"
+                                android:src="@drawable/exclamation"/>
+
+                            <TextView
+                                android:id="@+id/wOneHrTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="--- °C"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/wOneHrWet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="--- %"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp">
+
+                        <ImageView
+                            android:id="@+id/wTwoHrBg"
+                            android:src="@drawable/background_afternoon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/wTwoHrTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="- - : - -"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/wTwoHrImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitStart"
+                                android:maxWidth="50dp"
+                                android:maxHeight="50dp"
+                                android:src="@drawable/exclamation"/>
+
+                            <TextView
+                                android:id="@+id/wTwoHrTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="--- °C"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/wTwoHrWet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="--- %"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp">
+
+                        <ImageView
+                            android:id="@+id/wThreeHrBg"
+                            android:src="@drawable/background_afternoon"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:weightSum="4">
+
+                            <TextView
+                                android:id="@+id/wThreeHrTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="- - : - -"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/wThreeHrImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitStart"
+                                android:maxWidth="50dp"
+                                android:maxHeight="50dp"
+                                android:src="@drawable/exclamation"/>
+
+                            <TextView
+                                android:id="@+id/wThreeHrTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="--- °C"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/wThreeHrWet"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="--- %"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_above="@+id/wLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/wLogoTxt"/>
+
+                <ImageView
+                    android:id="@+id/wLogo"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/foreca_logo" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

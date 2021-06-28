@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:title="Menu Settings">
+
+        <ListPreference
+            android:key="@string/font_size_key"
+            android:title="Font Size"
+            android:summary="Font size of the item to be displayed"
+            android:entries="@array/font_size_names"
+            android:entryValues="@array/font_size_values"
+            android:defaultValue="@string/font_size_default" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

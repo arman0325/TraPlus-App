@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">TraPlus</string>
+    <string name="offlineMenuTitle">Offline Menu</string>
+
+    <!--main page-->
+    <string name="divider1">Hello</string>
+    <string name="divider2">Info board</string>
+    <string name="divider3">Dining Helpers</string>
+    <string name="divider4">now</string>
+    <string name="divider5">weather is</string>
+    <string name="camBtn">Translate Menu</string>
+    <string name="camDescribe">Capturing the Japanese menu and translate into Chinese text</string>
+    <string name="dictBtn">Offline Menu</string>
+    <string name="omDescribe">Quick check the common dishes without Internet</string>
+    <string name="tableBtn">Table Manner</string>
+    <string name="tmDescribe">Have a look on the Japanese table manners</string>
+    <string name="chatBtn">Two-way Chat</string>
+    <string name="chatDescribe">Two side splitted chat UI for communicate with Japanese</string>
+    <string name="calBtn">Currency\nCalculator</string>
+    <string name="calDescribe">equivalent</string>
+    <string name="wCardRain">Raining Chance\nwithin an hour</string>
+
+    <!--currency page-->
+    <string name="cModeTitle1">Live Rate</string>
+    <string name="cModeTitle2">Custom Rate</string>
+    <string name="cMode1">Change to Live Rate</string>
+    <string name="cMode2">Change to\nCustom Rate</string>
+    <string name="cDivider">Utilities</string>
+    <string name="cScale">Display Scale</string>
+    <string name="cLogoTxt">Data Provided By</string>
+    <string name="cLogoTxt2">CurrencyConverterApi.com</string>
+    <string name="diaTxt1">Custom Rate</string>
+    <string name="diaTxt2">\nAmount of HKD spent</string>
+    <string name="diaTxt3">\nAmount of JPY exchanged</string>
+    <string name="diaTxt4">OK</string>
+    <string name="diaTxt5">Cancel</string>
+    <string name="jpyL">&#127471;&#127477; JPY - Japanese Yen</string>
+    <string name="hkdL">&#127469;&#127472; HKD - Hong Kong Dollar</string>
+    <string name="jpyS">JPY</string>
+    <string name="hkdS">HKD</string>
+
+    <!--weather page-->
+    <string name="wDivider">Forecast</string>
+    <string name="wTemperature">Temperature</string>
+    <string name="wRain">Raining Chance</string>
+    <string name="wLogoTxt">Data From</string>
+
+    <string name="voiceZHBtn">Cantonese Voice Input</string>
+    <string name="voiceJPBtn">Japanese Voice Input</string>
+
+    <string name="tableMannerTitle">Table Manner</string>
+    <string name="mannerTxt1">• The Japanese eat at low dining tables and sit on a cushion placed on tatami floor (a reed-like mat)</string>
+    <string name="mannerTxt2">• If there is tokonoma in the room (a built-in recessed space), guests sit in front of it. The host sits at the middle of the table on one side.</string>
+    <string name="mannerTxt3">• In restaurants and bars a hot steamed towel (“oshibori”) is offered so you can clean your hands. Do not wipe your face with the towel.</string>
+    <string name="mannerTxt4a">• A meal begins once the main guest, family member or waitress makes a gesture to start eating.</string>
+    <string name="mannerTxt4b">• To finish the meal, one might say “gochisosama deshita”, which means, “thank you for the meal”.</string>
+    <string name="mannerTxt5">• When not in use, place your chopsticks on a “hashioki”, or chopstick stand.</string>
+    <string name="mannerTxt6">• Food should always be eaten in one bite, so try not to bite food into smaller bits.</string>
+    <string name="mannerTxt7">• When drinking alcoholic beverages, it is customary to serve each other rather than pour your own drink.</string>
+    <string name="mannerTxt8">• When consuming miso soup, drink the soup as if it were a cup, and then fish out the solid bits using chopsticks.</string>
+    <string name="mannerTxt9">• Placing empty clam shells on another plate or in the lid of a bowl is considered impolite.</string>
+    <string name="mannerTxt10">• Pour the amount of soya sauce you will use into the shallow.</string>
+    <string name="mannerTxt11">• When eating sushi, do not mix wasabi into your soya sauce bowl.</string>
+    <string name="mannerTxt12">• If pouring a drink, the hand holding the bottle should always pour forward.</string>
+    <string name="mannerTxt13">• Tea ceremonies require strict adherence to rules designed to promote tranquility.</string>
+    <string name="mannerTxt14">• When you’ve finished your meal, return the table to how it looked in the beginning.</string>
+    <string name="mannerTxt15">• Generally speaking, the person who invited everyone pays for the meal.</string>
+
+    <string name="font_size_key">item_size</string>
+    <string name="font_size_default">12</string>
+    <string-array name="font_size_names">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Large</item>
+    </string-array>
+    <string-array name="font_size_values">
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+    </string-array>
+</resources>
